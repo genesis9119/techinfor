@@ -31,8 +31,8 @@
             <directory>src/DataFixtures</directory>
         </exclude>
         <report>
-            <html outputDirectory="var/coverage/html-coverage" lowUpperBound="40" highLowerBound="70"/>
-            <php outputFile="var/coverage/coverage.php"/>
+            <html outputDirectory="var/coverage/html-coverage" />
+            <php outputFile="var/coverage/coverage.php" />
         </report>
     </coverage>
 
