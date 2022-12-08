@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>liste des groupes</h1>
+    {% if groups is not empty %}
+        <table>
+            <thead>
+                <tr>
+                    <th>nom</th>
+                    <th>description</th>
+                    <th>actif</th>
+                    <th>date de création</th>
+                    <th>date de mise à jour</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for g in groups %}
+                    <tr>
+                        <td>{{ g.name }}</td>
+                        <td>{{ g.description }}</td>
+                        <td>{{ g.isActivate ? 'oui' : 'non' }}</td>
+                        <td>{{ g.createdAt|date }}</td>
+                        <td></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>aucune données</p>
+    {% endif %}
+{% endblock %}

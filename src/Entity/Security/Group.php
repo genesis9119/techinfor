@@ -31,6 +31,9 @@ class Group
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private ?string $description = null;
 
+    #[ORM\Column(type: 'string', length: 255)]
+    private string $slug;
+
     #[ORM\Column(type: 'integer', nullable: true)]
     private ?int $scope = null;
 
@@ -82,6 +85,18 @@ class Group
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getSlug(): string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }
