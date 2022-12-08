@@ -20,7 +20,9 @@
                         <td>{{ g.description }}</td>
                         <td>{{ g.isActivate ? 'oui' : 'non' }}</td>
                         <td>{{ g.createdAt|date }}</td>
-                        <td></td>
+                        <td>
+                            <a href="{{ path('admin_group_show', {'uuid' : g.uuid}) }}">voir</a>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>

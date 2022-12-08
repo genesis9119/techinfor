@@ -1,0 +1,6 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>groupe: {{ group.name }}</h1>
+    <p>actif: {{ group.isActivate ? 'oui' : 'non' }}</p>
+    <p>créé le {{ group.createdAt|date }}</p>
+{% endblock %}
