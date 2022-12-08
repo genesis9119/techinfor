@@ -1,0 +1,7 @@
+parameters:
+    paths:
+        - src
+    level: 9
+    excludePaths:
+        - src/Datafixtures
+    checkGenericClassInNonGenericObjectType: false
