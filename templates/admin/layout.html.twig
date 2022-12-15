@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <header>
+        <button id="button-sidenav"></button>
+        <a href="#">techinfor</a>
+        <form action="">
+            <label for="search">search</label>
+            <input type="text" name="search" id="search">
+        </form>
+        <nav>
+            <ul>
+                <li>deconnexion</li>
+            </ul>
+        </nav>
+    </header>
+    <nav></nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer></footer>
+{% endblock %}
